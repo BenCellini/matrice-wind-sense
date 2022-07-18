@@ -1,2 +1,2 @@
-# matrice-winf-sense
+# matrice-wind-sense
 ROS package to sense wind direction from a Matrice 300 drone
