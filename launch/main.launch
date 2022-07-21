@@ -8,6 +8,10 @@
 
 	<include file="$(find raspicam_node)/launch/camerav2_custom.launch" />
 
-	<!-- node name="flystate2phidgetsanalog"    pkg="Kinefly"   type="flystate2phidgetsanalog.py" ns="kinefly"  required="true"	/ -->
+	<node name="optic_flow" pkg="matrice_wind_sense"   type="optic_flow_lucas_kanade_compressed.py"  required="true"	/>
+
+	<node name="trisonica"  pkg="trisonica_ros"   type="trisonica.py"  required="true"	/>
+
+	<include file="$(find dji_osdk_ros)/launch/dji_sdk_node.launch" />
 
 </launch>
