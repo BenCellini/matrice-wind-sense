@@ -1,0 +1,13 @@
+
+<launch>
+	<!-- ========================================================== -->
+	<!-- Launch everything needed                                   -->
+	<!-- ========================================================== -->
+
+	<!-- include file="$(find Kinefly)/launch/$(env RIG)/params_kinefly.launch"     ns="kinefly" 	/ -->
+
+	<include file="$(find raspicam_node)/launch/camerav2_custom.launch" />
+
+	<!-- node name="flystate2phidgetsanalog"    pkg="Kinefly"   type="flystate2phidgetsanalog.py" ns="kinefly"  required="true"	/ -->
+
+</launch>
