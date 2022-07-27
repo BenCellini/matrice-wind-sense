@@ -4,13 +4,7 @@
 	<!-- Launch everything needed                                   -->
 	<!-- ========================================================== -->
 
-    <include file="$(find dji_osdk_ros)/launch/dji_sdk_node.launch" />
-
-	<include file="$(find raspicam_node)/launch/camerav2_custom.launch" />
-
-	<node name="optic_flow" pkg="matrice_wind_sense"   type="optic_flow_lucas_kanade_compressed.py"  required="true"	/>
-
-    <arg name="onboard_port" 	    default="/dev/ttyUSB1"  />
+    <arg name="onboard_port" 	    default="/dev/USB1"  />
     <arg name="onboard_topic" 	    default="trisonica"  />
 	<node name="onboard_trisonica"  pkg="trisonica_ros"   type="trisonica_usb.py"  required="true"	>
 	    <param name="port"      type="string"   value="$(arg onboard_port)"     />

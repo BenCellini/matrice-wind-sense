@@ -1,0 +1,14 @@
+
+<launch>
+	<!-- ========================================================== -->
+	<!-- Record a .bag file                                         -->
+	<!-- ========================================================== -->
+
+    <arg name="prefix" 	    default="Unamed"  	                        />
+    <arg name="time" 	    default="10" 			                    />
+	<arg name="root" 	    default="/media/ubuntu/Matrice/data" 	/>
+	<!-- arg name="root" 	default="$(env HOME)" 	-->
+
+    <node name="rosbag"  pkg="rosbag"   type="record" args="-a --buffsize=2048 --duration=$(arg time) /chatter -o $(arg root)/$(arg prefix)" />
+
+</launch>
